@@ -9,20 +9,36 @@ public class Exercicio9 {
     public static void main(String[] args) {
 
 	scanner = new Scanner(System.in);
+	
+	System.out.println("Digite o primeiro número");
+	double numero1 = scanner.nextDouble();
+	
+	System.out.println("Digite o segundo número");
+	double numero2 = scanner.nextDouble();
+	
+	System.out.println("Digite o terceiro número");
+	double numero3 = scanner.nextDouble();
+	
 
-	System.out.println("Digite a letra correspondente ao seu turno, sendo M - matutino, V - vespertino ou N - noturno");
-	String turno = scanner.next();
-		
-	if(turno.equals("M")){
-	    System.out.println("Bom dia!!");
-	}else if(turno.equals("V")){
-	    System.out.println("Boa tarde!!");
-	}else if(turno.equals("N")){
-	    System.out.println("Boa noite!!");
-	}else{
-	    System.out.println("Valor inválido!");
+	if(numero1 <= numero2 && numero1 <= numero3 && numero2 <= numero3){
+	    System.out.println("Sequencia: " + numero3 + " " + numero2 + " " + numero1);
+	
+	}else if(numero1 <= numero2 && numero1 <= numero3 && numero3 <= numero2){
+	    System.out.println("Sequencia: " + numero2 + " " +numero3 + " " + numero1);
+	
+	}else if(numero2 <= numero1 && numero2 <= numero3 && numero1 <= numero3){
+	    System.out.println("Sequencia :" + numero3 + " " + numero1 + " " + numero2 );
+	
+	}else if(numero2 <= numero1 && numero2 <= numero3 && numero3 <= numero1){
+	    System.out.println("Sequencia :" + numero1 + " " + numero2 + " " + numero2 );
+	
+	}else if(numero3 <= numero1 && numero3 <= numero2 && numero1 <= numero2){
+	    System.out.println("Sequencia :" + numero2 + " " + numero1 + " " + numero3 );
+	
+	}else if(numero3 <= numero1 && numero3 <= numero2 && numero2 <= numero1){
+	    System.out.println("Sequencia :" + numero1 + " " + numero2 + " " + numero3 );
 	}
-			
+		
     }
 
 }
